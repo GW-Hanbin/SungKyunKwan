@@ -89,7 +89,6 @@ def beer_crawl(driver, beer, data, k):
 
  result = pd.merge(data, beer_list, on='검색이름', how='left')
  result.to_csv("beer_n_" + str(k) + ".csv", encoding='utf-8-sig')
- result.to_excel("beer_n_" + str(k) + ".xlsx")
 
  driver.quit()
 
