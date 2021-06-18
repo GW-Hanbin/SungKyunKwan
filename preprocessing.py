@@ -27,13 +27,8 @@ ttmp['맥주정보'] = ttmp['맥주정보'].apply(lambda x: x[0] if reg.match(x[
 ttmp['평점'] = ttmp['맥주정보'].apply(lambda x : x[:3])
 ttmp['날짜'] = ttmp['맥주정보'].apply(lambda x : x[3:])
 
-# 컬럼명 변경
-ttmp.columns = ['맥주이름', '맥주정보', '아이디', 'Aroma', 'Appearance', 'Flavor',
-       'Mouthfeel', 'Overall', '길이', '평점', '날짜']
-
-# 필요한 컬럼만 추출
-ttmp = ttmp[['아이디', '맥주이름', '날짜', '평점', 'Aroma', 'Appearance', 'Flavor',
-       'Mouthfeel', 'Overall']]
+ttmp.columns = ['맥주이름', '맥주정보', '아이디', 'Aroma', 'Appearance', 'Flavor', 'Mouthfeel', 'Overall', '길이', '평점', '날짜']
+ttmp = ttmp[['아이디', '맥주이름', '날짜', '평점', 'Aroma', 'Appearance', 'Flavor', 'Mouthfeel', 'Overall']]
 
 ttmp = ttmp[ttmp['Aroma'] != '-']
 ttmp = ttmp[ttmp['Appearance'] != '-']
