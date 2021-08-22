@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>ver2 recommendation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        *{
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            color: beige;
+        }
+
+        h3{
+            text-align: center;
+        }
+
+        h5{
+            font-family: 'Gowun Dodum', sans-serif;
+            text-align: center;
+            font-style: italic;
+        }
+
+        input[type=text]{
+            width : 190px;
+            height : 30px;
+            font-size : 20px;
+            border-radius: 20px;
+        }
+
+        img{
+            display: block;
+            margin: 0px auto;
+            width: 30%;
+        }
+
+        select{
+            text-align-last: center;
+            width: 200px;
+            padding: .5em .5em;
+            border: 1px solid #999;
+            font-family: inherit;
+
+            border-radius: 20px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        #user {
+        }
+    </style>
+</head>
+<body>
+
+<div class="txc-textbox" style="border: solid 5px navy; background-color:navy; padding: 10px; width : 80%; margin: 0 auto; margin-bottom: 5%;">
+    <h1>좋아하는 맥주들과 평점을 선택해주세요.</h1>
+</div>
+
+<img src="static/img/beers.png">
+<br><br>
+<div class="txc-textbox" style="border: solid 5px green; padding: 10px; width : 25%; margin: 0 auto">
+    <h5>
+        <b>* 이용방법 *</b>
+        <br><br>
+        1. 마셔본 5가지 맥주의 종류를 중복되지 않게 선택합니다.
+        <br>
+        2. 마셔본 맥주의 평점을 1점부터 5점까지 매깁니다.
+        <br>
+        3. 아래의 확인하기 버튼을 클릭합니다.
+    </h5>
+</div>
+
+<div style="text-align:center;">
+    <h3>아이디</h3>
+    <input type="text" name="name" text-align="center">
+    <br><br>
+</div>
+<div id="user">
+    <div style="text-align:center; margin: 0px auto;">
+        <form method="POST">
+            {% csrf_token %}
+
+            <h3>맥주 1</h3>
+            <select name="beer1">
+                {% for tmp in beer_list %}
+                <option value='{{tmp}}'>{{tmp}}</option>
+                {% endfor %}
+            </select><br>
+            <h3>평점</h3>
+            <select name="rating1">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+
+            <br><br>
+
+
+
+            <h3>맥주 2</h3>
+            <select name="beer2">
+                {% for tmp in beer_list %}
+                <option value='{{tmp}}'>{{tmp}}</option>
+                {% endfor %}
+            </select><br>
+            <h3>평점</h3>
+            <select name="rating2">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+            <br><br>
+
+
+
+            <h3>맥주 3</h3>
+            <select name="beer3">
+                {% for tmp in beer_list %}
+                <option value='{{tmp}}'>{{tmp}}</option>
+                {% endfor %}
+            </select><br>
+            <h3>평점</h3>
+            <select name="rating3">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+            <br><br>
+
+
+
+            <h3>맥주 4</h3>
+            <select name="beer4">
+                {% for tmp in beer_list %}
+                <option value='{{tmp}}'>{{tmp}}</option>
+                {% endfor %}
+            </select><br>
+            <h3>평점</h3>
+            <select name="rating4">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+            <br><br>
+
+            <h3>맥주 5</h3>
+            <select name="beer5">
+                {% for tmp in beer_list %}
+                <option value='{{tmp}}'>{{tmp}}</option>
+                {% endfor %}
+            </select><br>
+            <h3>평점</h3>
+            <select name="rating5">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+            <br><br>
+            <br><br>
+            <input class="btn btn-success" type="submit" value="확인하기">
+            <a class="btn btn-danger" type="submit" href="/">메인메뉴</a>
+        </form>
+    </div>
+    <h5>
+        <div class="txc-textbox" style="border: solid 5px green; padding: 10px; width : 25%; margin: 0 auto">
+            <b>
+                성균관대학교 수학과 <br> 2016313695 이한빈
+            </b>
+        </div>
+    </h5>
+</div>
+</div>
+</body>
+</html>

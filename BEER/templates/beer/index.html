@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--bootstrapCDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>맥주추천시스템_2016313695 이한빈</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        h1{
+            font-family: 'Style Script', cursive;
+            font-size: 100px;
+        }
+        h3{
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        h4{
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        h5{
+            font-family: 'Gowun Dodum', sans-serif;
+            font-style: italic;
+        }
+        body{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+<div>
+    <img src= "{% static 'img/main.png' %}">
+    <h1>Cheers !</h1>
+</div>
+
+<h3>
+    맥주 추천 사이트에 오신 것을 환영합니다.<br>
+    추천 유형을 선택해주세요.<br><br>
+    *종류는 대한민국 편의점에서 파는 국내·외 맥주에 한정했습니다.
+</h3><br>
+<h4>
+    <div id = "recommendation">
+        <a href="ver1">1. 유사도 기반 맥주 추천</a><br><br>
+        <a href="ver2">2. 평점 기반 맥주 추천</a><br><br>
+    </div>
+</h4>
+<h5>
+    <div class="txc-textbox" style="border: solid 5px green; padding: 10px; width : 25%; margin: 0 auto">
+        <b>
+            성균관대학교 수학과 <br> 2016313695 이한빈
+        </b>
+    </div>
+    ver.0.1
+</h5>
+</body>
+</html>
