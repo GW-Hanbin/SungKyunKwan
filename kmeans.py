@@ -40,18 +40,15 @@ plt.figure(figsize=(20,5))
 y_axis = None
 
 for i, mode in enumerate(modes):
-    # 서브플롯 추가, y축은 공유
     y_axis = plt.subplot(1, 4, i + 1, sharey=y_axis)
 
-    # 레이블링
+
     plt.title('Dendrogram - linkage mode: {}'.format(mode))
     plt.xlabel('distance')
     plt.ylabel('beers')
 
-    # 클러스터링
     clustering = linkage(newdata[['rating', 'Overall']], mode)
 
-    # 덴드로그램
     dendrogram(clustering, labels=list(newdata.index), orientation='right')
 plt.tight_layout()
 plt.show()
