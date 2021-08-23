@@ -9,12 +9,12 @@ def index(request):
     return render(request, 'beer/index.html')
 
 def ver1(request):
-    beer_list = pd.read_csv('beerName.csv', engine='python', index_col=0)
-    beer_year = pd.read_csv('averageAnnualRating.csv', engine='python', index_col=0)
-    ratings = pd.read_csv('afterPreprocessing.csv', engine='python', index_col=0)
-    cluster_3 = pd.read_csv('clusterRepresentative.csv', engine='python', index_col=0)
-    cluster_all = pd.read_csv('clusterAllvalues.csv', engine='python', index_col=0)
-    beer_data = pd.read_csv('beerCBFdata.csv', engine='python', index_col=0)
+    beer_list = pd.read_csv('/home/lhb9431/SungKyunKwan/beerName.csv', engine='python', index_col=0)
+    beer_year = pd.read_csv('/home/lhb9431/SungKyunKwan/averageAnnualRating.csv', engine='python', index_col=0)
+    ratings = pd.read_csv('/home/lhb9431/SungKyunKwan/afterPreprocessing.csv', engine='python', index_col=0)
+    cluster_3 = pd.read_csv('/home/lhb9431/SungKyunKwan/clusterRepresentative.csv', engine='python', index_col=0)
+    cluster_all = pd.read_csv('/home/lhb9431/SungKyunKwan/clusterAllvalues.csv', engine='python', index_col=0)
+    beer_data = pd.read_csv('/home/lhb9431/SungKyunKwan/beerCBFdata.csv', engine='python', index_col=0)
     beer_list = beer_list['beername']
     cluster_3 = cluster_3.values
 
@@ -83,12 +83,12 @@ def ver1(request):
         return render(request, 'beer/ver1.html', {'beer_list': beer_list})
 
 def ver2(request):
-    beer_list = pd.read_csv('beerName.csv', engine='python', index_col=0)
-    beer_year = pd.read_csv('averageAnnualRating.csv', engine='python', index_col=0)
-    ratings = pd.read_csv('afterPreprocessing.csv', engine='python', index_col=0)
-    cluster_3 = pd.read_csv('clusterRepresentative.csv', engine='python', index_col=0)
-    cluster_all = pd.read_csv('clusterAllvalues.csv', engine='python', index_col=0)
-    beer_data = pd.read_csv('beerCBFdata.csv', engine='python', index_col=0)
+    beer_list = pd.read_csv('/home/lhb9431/SungKyunKwan/beerName.csv', engine='python', index_col=0)
+    beer_year = pd.read_csv('/home/lhb9431/SungKyunKwan/averageAnnualRating.csv', engine='python', index_col=0)
+    ratings = pd.read_csv('/home/lhb9431/SungKyunKwan/afterPreprocessing.csv', engine='python', index_col=0)
+    cluster_3 = pd.read_csv('/home/lhb9431/SungKyunKwan/clusterRepresentative.csv', engine='python', index_col=0)
+    cluster_all = pd.read_csv('/home/lhb9431/SungKyunKwan/clusterAllvalues.csv', engine='python', index_col=0)
+    beer_data = pd.read_csv('/home/lhb9431/SungKyunKwan/beerCBFdata.csv', engine='python', index_col=0)
     beer_list = beer_list['beername']
     cluster_3 = cluster_3.values
 
