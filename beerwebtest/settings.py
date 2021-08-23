@@ -131,7 +131,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_DIR = os.path.join(BASE_DIR, 'beer/static')
+STATIC_DIR = os.path.join(BASE_DIR, 'BEER/static')
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
